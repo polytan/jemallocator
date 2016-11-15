@@ -11,6 +11,7 @@
 #![feature(allocator)]
 #![allocator]
 #![no_std]
+#![feature(libc)]
 
 extern crate jemalloc_sys as ffi;
 extern crate libc;

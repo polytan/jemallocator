@@ -9,6 +9,7 @@
 // except according to those terms.
 
 #![no_std]
+#![feature(libc)]
 
 extern crate libc;
 
