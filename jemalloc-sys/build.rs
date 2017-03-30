@@ -92,7 +92,7 @@ fn main() {
     // Turn off broken quarantine (see jemalloc/jemalloc#161)
     cmd.arg("--disable-fill");
     cmd.arg("--without-export");
-    if env::var_os("CARGO_FEATURE_PROFILING").is_some() {
+    if cfg!(feature = "profiling") || env::var_os("CARGO_FEATURE_PROFILING").is_some() {
         cmd.arg("--enable-prof");
     }
     cmd.arg(format!("--host={}", target.replace("windows-gnu", "w64-mingw32")));
