@@ -8,11 +8,13 @@
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
 
-#![feature(allocator)]
-#![allocator]
 #![no_std]
+#![allocator]
+#![feature(allocator)]
+#![feature(libc)]
 
 extern crate jemalloc_sys as ffi;
+
 extern crate libc;
 
 use libc::{c_int, size_t, c_void};
