@@ -10,6 +10,7 @@
 
 #![no_std]
 
+#![feature(libc)]
 extern crate libc;
 
 use libc::{c_int, c_void, size_t, c_char};
